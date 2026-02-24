@@ -1,9 +1,9 @@
 {
-    "app-id" : "moe.nyarchlinux.waifudownloader",
+    "app-id" : "moe.nyarchlinux.lappydownloader",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "48",
     "sdk" : "org.gnome.Sdk",
-    "command" : "waifudownloader",
+    "command" : "lappydownloader",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -26,7 +26,7 @@
     "modules" : [
     	"python3-requests.json",
         {
-            "name" : "waifudownloader",
+            "name" : "lappydownloader",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [
