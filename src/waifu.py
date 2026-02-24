@@ -3,26 +3,31 @@ import json
 
 class WaifuDownloaderAPI:
 	def __init__(self):
-		self.endpoint = "https://api.waifu.im/search?is_nsfw="
-	def get_page(self, nsfw = False):
-		try:
-			r = requests.get(self.endpoint + str(nsfw).lower(), timeout=10)
-			if r.status_code == 200:
-				return r.text
-			else:
-				return None
-		except Exception as e:
-			print(e)
-			return None
+		self.url = f"https://gelbooru.com//index.php?page=dapi&s=post&q=index&api_key=da94a99fb256765d2f354b28af5d875ad2c3f235d362381acb2cab173e9deecb3b04fd5abfa8c73c754325aafde62fed4038cfab446247a296f470f32d18e380&user_id=1923595&json=1&limit=1&limit=42&pid={random.randint(1, 139)}&tags=lappland_(arknights)"
+	def generate_random_image():
 
-	def get_page_url(self, response):
-		data = json.loads(response)
-		self.info = data
-		return data["images"][0]['url']
+    # Send GET request
+    response = requests.get(self.url)
+    data = response.json()
 
-	def get_neko(self, nsfw=False):
-		return self.get_page_url(self.get_page(nsfw))
+    image_url = data["post"][random.randint(0, 41)]["file_url"]
 
-	def get_image(self, url):
-		r = requests.get(url, timeout=20)
-		return r.content
+    print("Downloading:", image_url)
+
+    headers = {
+        "User-Agent": "Mozilla/5.0",
+        "Referer": "https://gelbooru.com/"
+    }
+
+    response = requests.get(
+        image_url,
+        headers=headers,
+        stream=True,
+        timeout=30
+    )
+
+    response.raise_for_status()
+
+    # check what you actually got
+    print(response.headers.get("Content-Type"))
+    return response.content
