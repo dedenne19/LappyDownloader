@@ -1,5 +1,5 @@
 #!/bin/sh
-OLD="moe.nyarchlinux.waifudownloader"
+OLD="moe.nyarchlinux.lappydownloader"
 NEW=$1
 OLD2="${OLD//./\\.}"
 OLD3="${OLD//.//}"
