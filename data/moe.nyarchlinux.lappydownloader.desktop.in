@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=Waifu Downloader
+Name=Lappy Downloader
 Comment=Very useful application to get random images of waifus
-Exec=waifudownloader
-Icon=moe.nyarchlinux.waifudownloader
+Exec=lappydownloader
+Icon=moe.nyarchlinux.lappydownloader
 Terminal=false
 Type=Application
 Categories=Utility;
