@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="lappydownloader">
+	<schema id="moe.nyarchlinux.lappydownloader" path="/moe/nyarchlinux/lappydownloader/">
+	</schema>
+</schemalist>
