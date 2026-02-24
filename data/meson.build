@@ -1,6 +1,6 @@
 desktop_file = i18n.merge_file(
-        input: 'moe.nyarchlinux.waifudownloader.desktop.in',
-       output: 'moe.nyarchlinux.waifudownloader.desktop',
+        input: 'moe.nyarchlinux.lappydownloader.desktop.in',
+       output: 'moe.nyarchlinux.lappydownloader.desktop',
          type: 'desktop',
        po_dir: '../po',
       install: true,
@@ -13,8 +13,8 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-        input: 'moe.nyarchlinux.waifudownloader.appdata.xml.in',
-       output: 'moe.nyarchlinux.waifudownloader.appdata.xml',
+        input: 'moe.nyarchlinux.lappydownloader.appdata.xml.in',
+       output: 'moe.nyarchlinux.lappydownloader.appdata.xml',
        po_dir: '../po',
       install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
@@ -25,7 +25,7 @@ if appstream_util.found()
   test('Validate appstream file', appstream_util, args: ['validate', appstream_file])
 endif
 
-install_data('moe.nyarchlinux.waifudownloader.gschema.xml',
+install_data('moe.nyarchlinux.lappydownloader.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 
