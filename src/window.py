@@ -54,10 +54,7 @@ class WaifudownloaderWindow(Adw.ApplicationWindow):
         else:
             nsfw = False
         ct = WaifuDownloaderAPI()
-        url = ct.get_neko(nsfw)
-        self.info = ct.info
-        if url is not None:
-            content = ct.get_image(url)
+        content = ct.generate_random_image()
         self.imagecontent = content
         # Display image
         loader = GdkPixbuf.PixbufLoader()
