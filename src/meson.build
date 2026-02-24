@@ -1,9 +1,9 @@
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-moduledir = join_paths(pkgdatadir, 'waifudownloader')
+moduledir = join_paths(pkgdatadir, 'lappydownloader')
 gnome = import('gnome')
 
-gnome.compile_resources('waifudownloader',
-  'waifudownloader.gresource.xml',
+gnome.compile_resources('lappydownloader',
+  'lappydownloader.gresource.xml',
   gresource_bundle: true,
   install: true,
   install_dir: pkgdatadir,
@@ -18,14 +18,14 @@ conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
 
 configure_file(
-  input: 'waifudownloader.in',
-  output: 'waifudownloader',
+  input: 'lappydownloader.in',
+  output: 'lappydownloader',
   configuration: conf,
   install: true,
   install_dir: get_option('bindir')
 )
 
-waifudownloader_sources = [
+lappydownloader_sources = [
   '__init__.py',
   'main.py',
   'window.py',
@@ -34,4 +34,4 @@ waifudownloader_sources = [
   'preferenceswindow.py',
 ]
 
-install_data(waifudownloader_sources, install_dir: moduledir)
+install_data(lappydownloader_sources, install_dir: moduledir)
