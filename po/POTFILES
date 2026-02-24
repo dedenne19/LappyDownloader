@@ -1,6 +1,6 @@
-data/moe.nyarchlinux.waifudownloader.desktop.in
-data/moe.nyarchlinux.waifudownloader.appdata.xml.in
-data/moe.nyarchlinux.waifudownloader.gschema.xml
+data/moe.nyarchlinux.lappydownloader.desktop.in
+data/moe.nyarchlinux.lappydownloader.appdata.xml.in
+data/moe.nyarchlinux.lappydownloader.gschema.xml
 src/main.py
 src/window.py
 src/window.ui
