@@ -1,1 +1,1 @@
-i18n.gettext('waifudownloader', preset: 'glib')
+i18n.gettext('lappydownloader', preset: 'glib')
