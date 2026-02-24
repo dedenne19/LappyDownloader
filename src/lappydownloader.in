@@ -1,6 +1,6 @@
 #!@PYTHON@
 
-# waifudownloader.in
+# lappydownloader.in
 #
 # Copyright 2023 Francesco Caracciolo
 #
@@ -31,15 +31,15 @@ localedir = '@localedir@'
 
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
-locale.bindtextdomain('waifudownloader', localedir)
-locale.textdomain('waifudownloader')
-gettext.install('waifudownloader', localedir)
+locale.bindtextdomain('lappydownloader', localedir)
+locale.textdomain('lappydownloader')
+gettext.install('lappydownloader', localedir)
 
 if __name__ == '__main__':
     import gi
 
     from gi.repository import Gio
-    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'waifudownloader.gresource'))
+    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'lappydownloader.gresource'))
     resource._register()
 
     from waifudownloader import main
