@@ -1,4 +1,4 @@
-application_id = 'moe.nyarchlinux.waifudownloader'
+application_id = 'moe.nyarchlinux.lappydownloader'
 
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(
