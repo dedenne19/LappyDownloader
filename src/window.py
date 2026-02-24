@@ -22,7 +22,7 @@ from .waifu import WaifuDownloaderAPI
 import threading
 from .preferences import UserPreferences
 
-@Gtk.Template(resource_path='/moe/nyarchlinux/waifudownloader/../data/ui/window.ui')
+@Gtk.Template(resource_path='/moe/nyarchlinux/lappydownloader/../data/ui/window.ui')
 class WaifudownloaderWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'WaifudownloaderWindow'
 
